@@ -1,0 +1,31 @@
+Git 学习笔记
+一、新建Git仓库
+首先新建一个本地目录，存放需要被版本管理的文件
+
+其次，进入当该目录，使用 git init命令将该目录变为一个空的Git仓库。
+
+二、向仓库中提交文件
+
+在仓库目录下（可以是该目录的子目录）新建一个readme.txt文件并编辑
+
+使用如下命令提交文件
+git add readme.txt
+git commit -m "add readme.txt"
+
+可以通过git status查看仓库当前状态
+
+三、版本回退
+
+如果readme.txt被修改了，可以通过
+git diff readme.txt 命令查看readme.txt 与上次提交的文件哪些地方被修改
+
+如果想恢复到上一个提交的版本，使用
+git reset --hard HEAD^ 
+
+HEAD表示当前版本，HEAD^ 表示上一个版本，类似的HEAD^^表示上上一个版本， 如果版本过多 可以使用如 HEAD~10 表示前面第10个版本
+
+通过git log查看提交记录
+
+git relog 查看输入的命令的历史记录,而且可以获取commit_id
+
+git reset --hard commit_id 可以在各个提交版本之间切换
