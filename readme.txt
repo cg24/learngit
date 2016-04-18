@@ -5,4 +5,4 @@ Git tarck changes a file
 Create a new branch is quick and simple
 merge branchs with --no-off
 merge branchs with --no-off second time
-git push from test/learngit branch dev
+git push origin dev from branch dev
